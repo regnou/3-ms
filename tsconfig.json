@@ -1,0 +1,47 @@
+{
+
+        "compilerOptions": {
+          "target"           : "es2017",
+          "module"           : "commonjs",
+          "lib"              : ["es2017", "dom"],
+          "moduleResolution": "node",
+          "esModuleInterop"  : true,
+          "noImplicitReturns": true,
+          "outDir"           : "1-dist/functions",
+          "sourceMap"        : true,
+          "allowJs"          : true,
+          "experimentalDecorators": true,
+        },
+        "compileOnSave": true,
+        "include"      : [
+          "0-lib/functions"
+        ]
+
+
+    //? - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // "compilerOptions": {
+    //     //. - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    //     "module": "commonjs",
+    //     // "module"                : "ES6",
+    //     // "moduleResolution"      : "node",
+    //     "noImplicitReturns"     : true,
+    //     "noUnusedLocals"        : true,       // ?
+    //     "experimentalDecorators": true,
+    //     "outDir"                : "1-dist",
+    //     "lib"                   : [
+    //         "es2015",
+    //         "dom",
+    //         "dom.iterable"
+    //     ],
+    //     // "strict"   : true,
+    //     "esModuleInterop": true,
+    //     "allowJs"  : true,
+    //     "sourceMap": true,
+    //     "target"   : "es2015",
+    // },
+    // "compileOnSave": true,
+    // "include"      : [
+    //     "0-src/functions"
+    // ]
+}
+

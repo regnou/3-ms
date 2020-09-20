@@ -1,0 +1,36 @@
+// //?-############################################################################
+// //=-VS-SETTING [ PLEASE do not use LOCAL SETTINGS => too complicated to manage]
+// //?-############################################################################
+
+//. VS SEARCH exclude
+// .firebaserc
+
+// // *[ LOCAL ]
+{
+  "projectManager.git.baseFolders": [
+    "/Users/x/0git/axel"
+  ],
+  //!-DO NOT USE
+  "workbench.colorCustomizations": {
+    "terminal.foreground"             : "#676565",
+    "terminal.background"             : "#aec1d3",
+    "activityBar.background"          : "#ffb700",
+    "activityBar.foreground"          : "#000000",
+    "titleBar.activeBackground"       : "#ffb700",
+    "titleBar.activeForeground"       : "#000000",
+   // "list.activeSelectionBackground"  : "#daab14",
+   // "list.activeSelectionForeground"  : "#000000",
+   // "list.inactiveSelectionBackground": "#ffee04",
+   // "list.inactiveSelectionForeground": "#000000",
+   // "tab.activeBackground"            : "#16a72e",
+   // "tab.activeForeground"            : "#000000",
+   // "tab.inactiveForeground"          : "#16a72e",
+   // "sideBar.foreground"              : "#d1e1e3",
+   // "sideBar.background"              : "#000000"
+  }
+}
+
+// //?-############################################################################
+// //?-END
+// //?-############################################################################
+// // *[ LOCAL ]

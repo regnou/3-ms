@@ -1,0 +1,81 @@
+    //°----------------------------------------------------
+    //°CHROME DEBUG [front: OWC] 🚀 [ PORTFOLIO ]
+    //°----------------------------------------------------
+    {
+        //Attach-9222-to-8001
+        "name"   : "🖼 FRONT",
+        "type"   : "chrome",
+        "request": "attach",
+        "port"   : 9222,
+        "url"    : "http://localhost:8001",
+        // "url"    : "http://localhost:8001/0-ui/widget/4-tree/index.html",
+
+        // "userDataDir"           : true,
+        "webRoot": "${workspaceRoot}",
+        //"webRoot"               : "${workspaceRoot}/2-VIEWER/1-D-owc/public/src/",
+        "sourceMapPathOverrides": {
+          //"webpack:///src/*": "${webRoot}/*" // TGZ PROJ
+        },
+        "skipFiles": [
+          // "${workspaceFolder}/src/browser/esDevLocal/v0-0-1-reader_viewer/node_modules/**/*.js",
+          // "${workspaceFolder}/static/**",
+          // "**/bundle.js",
+          // "bundle.js",
+          // "jquery.js"
+        ]
+        // "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        // "runtimeExecutable": "/Applications/Google Chrome.app",
+        // "trace": true,
+      },
+
+
+
+
+      //?-########################################################
+//?-README
+//?-########################################################
+//Executable Path	/Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+//Profile Path	/Users/x/Library/Application Support/Google/Chrome/Default
+//Use IntelliSense to learn about possible attributes.
+//Hover to view descriptions of existing attributes.
+//°DOC DEBUG
+//!VS                       => https://go.microsoft.com/fwlink/?linkid=830387
+//!microsoft/vscode-recipes => https://github.com/Microsoft/vscode-recipes/tree/master/nodemon
+//!CHROME                   => https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome
+//------------------------------------------------------
+//
+//------------------------------------------------------
+// {
+//   "restart"          : true,
+//   "type"             : "node",
+//   "request"          : "launch",
+//   "name"             : "B-tin-db",
+//   "runtimeExecutable": "nodemon",
+//   "program"          : "${workspaceFolder}/2-functions/1-TIN/0-getDb.js",
+//   // "runtimeArgs": ["--experimental-modules"],
+//   "skipFiles": [
+//     "node_modules/**/*.js",
+//     "<node_internals>/**",
+//     "/**/internal/process/*.js"
+//   ]
+//   //   "lib/**/*.js",
+//   //   "async_hooks.js",
+//   //   "inspector_async_hook.js"
+// },
+//------------------------------------------------------
+//ES-DEV WATCH [front: OWC]
+//°I did not suceed it!
+//------------------------------------------------------
+// {
+//   "type": "node",
+//   "request": "launch",
+//   "name": "YARN",
+//   "runtimeExecutable": "yarn",
+//   "runtimeArgs": [
+//     "start" //watch-esDevServer
+//   ],
+//   // "port": 8001,
+//   // "skipFiles": [
+//   //   "<node_internals>/**"
+//   // ]
+// },
