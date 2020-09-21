@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>my-webapp</title>
+  <!-- update the version number as needed -->
+  <!-- <script defer src="/__/firebase/6.4.0/firebase-app.js"></script> -->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/6.4.0/firebase-auth.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.4.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.4.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.4.0/firebase-storage.js"></script> -->
+  <!-- initialize the SDK after all desired features are loaded -->
+  <!-- <script defer src="/__/firebase/init.js"></script> -->
+  <style media="screen">
+    html,
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: gainsboro;
+    }
+
+    footer {
+      background: gray;
+    }
+
+    .periodic-table {
+      background: red;
+      display: grid;
+      grid-template-columns: repeat(18, 1fr [col-start]);
+      /* 18 columns */
+      grid-template-rows: repeat(10, 90px [col-start]);
+      /* 10 rows */
+    }
+
+    .periodic-table .element {
+      border: 2px solid #fff;
+      text-align: center;
+      padding-top: 30px;
+      font-family: Arial;
+      font-weight: bold;
+    }
+
+    nav {
+      /* grid-row: 2 / span 2; */
+      background: yellow;
+    }
+
+    header {
+      background: cyan;
+    }
+
+     .periodic-table .element.-n1 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    /* 2ème élément  */
+    .periodic-table .element.-n2 {
+      grid-column: 18/19;
+      grid-row: 1/2;
+    }
+
+    /* 58ème élément  */
+    .periodic-table .element.-n58 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      border-color: cyan;
+    }
+
+    /* 108ème élément  */
+    .periodic-table .element.-n108 {
+      grid-column: 8/9;
+      grid-row: 7/8;
+    }
+
+    /* 103ème élément  */
+    .periodic-table .element.-n103 {
+      grid-column: 17/18;
+      grid-row: 10/11;
+    }
+
+    /* 118ème élément  */
+    .periodic-table .element.-n118 {
+      grid-column: 18/19;
+      grid-row: 7/8;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <header>header</header>
+  <nav>nav</nav> -->
+  <main>
+
+    <div class="periodic-table">
+      <div class="element -n1 -reactive-nonmetal">1 <br /> H</div>
+      <div class="element -n2 -noble-gas">2 <br /> He</div>
+      <div class="element -n58 -alkali-metal">58 <br /> Li</div>
+
+      <div class="element -n118 -unknown-chemical-properties">118 <br /> Og</div>
+    </div>
+
+    <!-- <div id="message">
+        <p>my-webapp</p>
+        <p>bla bla ...</p>
+        <a target="_blank" href="https://firebase.google.com/docs/hosting/">host doc</a>
+      </div>
+      <p id="load">Firebase SDK Loading &hellip;</p> -->
+  </main>
+  <!-- <footer>footer</footer> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      try {// let app = firebase.app();
+        // let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+        // document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        // document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+</body>
+
+</html>

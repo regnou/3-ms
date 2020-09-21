@@ -1,0 +1,37 @@
+<script src='//www.polymer-project.org/components/platform/platform.js'></script>
+<link rel='import' href='//www.polymer-project.org/components/polymer/polymer.html'>
+
+
+<polymer-element name='tree-node' attributes='nodeData' noscript>
+  <template>
+    <ul>
+      <li>{{nodeData.title}} ({{nodeData.id}})</li>
+      <template repeat='{{child in nodeData.children}}'>
+        <tree-node nodeData='{{child}}'></tree-node>
+      </template>
+    </ul>
+  </template>
+</polymer-element>
+
+<script>
+  var data = [
+    {id: 1, title: 'hello', parent: 0, children: [
+      {id: 3, title: 'hello', parent: 1, children: [
+          {id: 4, title: 'hello', parent: 3, children: [
+              {id: 5, title: 'hello', parent: 4},
+              {id: 6, title: 'hello', parent: 4}
+          ]},
+          {id: 7, title: 'hello', parent: 3}
+      ]}
+    ]},
+    {id: 2, title: 'hello', parent: 0, children: [
+        {id: 8, title: 'hello', parent: 2}
+    ]}
+  ];
+
+  data.forEach(function(nodeData) {
+    var treeNode = document.createElement('tree-node');
+    treeNode.nodeData = nodeData;
+    document.body.appendChild(treeNode);
+  });
+</script>

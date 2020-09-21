@@ -1,0 +1,71 @@
+::-webkit-scrollbar {
+ width: 0px;
+ background: transparent; /* make scrollbar transparent */
+}
+.trailer {
+ height: 400px;  /* THIS ONE IS IMPORTANT  */
+ overflow-x      : scroll;
+ scroll-snap-type: x mandatory;     /* TODO */
+ border     : 1px solid black;
+ white-space     : nowrap;
+ padding         : 25px 0 3px 0;
+ margin          : 0;
+ /* background: white; */
+ background: black;
+}
+
+.arrow-right {
+ position  : sticky;
+ right     : 0;
+ top       : 0;
+ width     : 20px;
+ background: black;
+ color     : white;
+ /* display   : none; */
+ opacity: 0;
+ }
+ .arrow-left {
+ position  : sticky;
+ left      : 0;
+ top       : 0;
+ width     : 20px;
+ background: black;
+ color     : white;
+ /* display   : none; */
+ opacity: 0;
+ }
+.arrow-left .material-icons{
+ margin-top: 60px;
+ cursor: default;
+ }
+ .arrow-right .material-icons{
+  margin-top: 60px;
+  cursor: default;
+  }
+ .trailer:hover   .arrow-left,
+ .trailer:hover   .arrow-right {
+ display: block;
+ opacity: 0.5;
+ }
+
+
+.trailer-banner-div {
+ display          : inline-block;
+ border     : 1px solid black;
+ width            : calc(100% - 2px);
+ height           : calc(100% - 10px);
+ text-align       : center;
+ scroll-snap-align: start;
+ position         : relative;
+}
+.trailer-banner-div:active{
+ opacity: 0.5;
+ }
+/* .trailer:hover { */
+ /* background: black; */
+ /* } */
+.trailer-banner-img {
+ object-fit: cover; /* THIS ONE IS IMPORTANT  */
+ width     : 100%;
+ height    : 100%;
+}

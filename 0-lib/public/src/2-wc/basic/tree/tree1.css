@@ -1,0 +1,68 @@
+/* Remove default bullets */
+ul, li {
+  list-style-type: none;
+  /* height: 1em; */
+}
+/*!- DEBUG */
+ul {
+  /* background: rgba(0, 255, 136, 0.133); */
+}
+li {
+  /* background: rgba(255, 0, 204, 0.133); */
+}
+[role="treeitem"],
+[role="treeitem"] span {
+  width       : 16em;
+  margin      : 0;
+  padding     : 0.125em;
+  border      : 2px transparent solid;
+  display     : block;
+}
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+[role="treeitem"]:focus {
+  outline: 0;
+}
+
+[role="treeitem"] span.focus {
+  border-color    : black;
+  background-color: #eee;
+}
+[role="treeitem"] span:hover {
+  background-color: #ddd;
+}
+
+/* folder */
+[role="treeitem"][aria-expanded] > span   {
+  cursor: pointer;
+  /* margin-left: -1.1em; */
+  /* position: relative;
+  left    : -1.1em; */
+}
+/* leaf */
+span[role="treeitem"]   {
+  cursor: default;
+}
+/*?- collapse */
+[role="treeitem"][aria-expanded="false"] > ul {
+  display: none;
+}
+/*?- expand */
+[role="treeitem"][aria-expanded="true"] > ul {
+  display: block;
+}
+/* content : url(../images/right-arrow-brown.png); */
+[role="treeitem"][aria-expanded="false"] > span::before {
+  content: "\25B6";
+  font-size: 0.8em;
+  padding-right: 0.3em;
+  /* position: relative;
+  left    : -0.5em; */
+}
+[role="treeitem"][aria-expanded="true"] > span::before {
+  content: "\25BC";
+  font-size: 0.8em;
+  padding-right: 0.3em;
+  /* position: relative;
+  left: -0.5em; */
+}
