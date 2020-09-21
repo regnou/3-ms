@@ -1,0 +1,14 @@
+.wrapper {
+ background: white;
+ color: black;
+ height: 20px;
+ width: 150px;
+ border: 1px solid #000;
+ cursor: pointer;
+}
+
+.wrapper:hover {
+  background: rgb(255, 249, 212) !important;
+  color: black !important;
+  /* opacity: 0.5; */
+}

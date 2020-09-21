@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+	match /databases/{database}/documents {
+  	// CASE 1
+  	// ! Allow read/write access to all users under any conditions
+		// ! Warning: **NEVER** use this rule set in production; it allows
+		// ! anyone to overwrite your entire database.
+  	//match /{document=**} {
+      // allow read, write: if true; }
+
+    // CASE 2
+		// match /users/{uid} {
+  	// 	allow create: if
+    //  	request.auth.uid == uid &&
+    //   	request.resource.data.createdAt == request.time &&
+    //  	request.resource.data.credits == 5;
+    // 	allow get: if request.auth.uid == uid;
+  	// }
+
+    // CASE 3 (design)
+		// match /users/{uid} {
+		//   allow get: if request.auth.uid == uid;
+  	// }
+
+// CASE 4 (bidelman)
+  match /databases/{database}/documents {
+    function isGoogler() {
+      return true;
+    }
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+
+    // END
+	}
+}
+
+
+
+
+

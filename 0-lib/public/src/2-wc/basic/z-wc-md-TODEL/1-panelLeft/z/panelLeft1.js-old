@@ -1,0 +1,45 @@
+
+// const myInfoBox = document.querySelector('my-info-box');
+// const text = myInfoBox.children[0].innerText;
+// console.log(text); // I'm slotted content!
+
+
+     // onClick_siteHandler(e) {
+     //      const id = e.target.id;
+     //      let event = new CustomEvent('x-event-cmdOpenSite', {
+     //           detail: {
+     //                message: 'EVENT: cmdOpenSite',
+     //                idSite: id
+     //           },
+     //           bubbles: true,
+     //           composed: true
+     //      });
+     //      this.dispatchEvent(event);
+     // }
+     //--------------------------------------------------------
+     // firstUpdated(changedProperties) {
+     //      //!debug => default load
+     //      let event = new CustomEvent('x-event-cmdOpenSite', {
+     //           detail: {
+     //                message: 'EVENT: cmdOpenSite',
+     //                idSite: "tinderTool"
+     //                // idSite: "vitrine"
+     //           },
+     //           bubbles: true,
+     //           composed: true
+     //      });
+     //      this.dispatchEvent(event);
+     // }
+
+               // const elem = this.shadowRoot.getElementById('section-' + e.currentTarget.id)
+          // TOGGLE DISPLAY
+          // elem.classList.toggle("activated");  // .classList.add("activated");
+          // if (elem.style.display === "none") {
+          //      elem.style.display = "block";
+          // } else {
+          //      elem.style.display = "none";
+          // }
+
+          //rajouter le caractere actif / inactif...
+     //OBSOLETE: this will open the last link
+     //TODO- this open a new PAGE (make XHR request...)

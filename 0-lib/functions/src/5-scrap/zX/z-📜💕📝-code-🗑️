@@ -1,0 +1,283 @@
+// let textArea = null;
+// await page.waitForSelector('textarea');
+// textArea = await page.$('textarea');
+// write msg
+// let chat_arrO_ = [];
+// try {
+//   //Axel msg only (cf. .message__current span)
+//   //si j n ai pas repondu, et il va attendre longtemps pour trouver mes reponses :
+//   await page.waitForSelector('.message__current span');
+//   chat_arrO_ = await page.$$('.message__current span');
+// } catch (err) { // Will write msg for first time
+//   // err.axel_msg = 'STRANGE: nothing to do here ? I have not written any msg for page: ' + page.url();
+//   // libErr.fe("()", err, '🍌', '🔵🍌'); //no return for main !
+//   // console.log('🟡DEBUG 🟡 WARNING 🟡 you simply didnt wrote any msg to this person : ' + page.url());
+// }
+
+
+
+//@-----------------------------------------------------------------------------
+//@-                              .
+//@-----------------------------------------------------------------------------
+function F3() {
+  // === === === === liste
+  await page2.waitForSelector('#root > div > div.logged__nav-bar > ul > li:nth-child(3) > a > div > i')
+  // * J'y vais directement via l'url
+  await page2.click('#root > div > div.logged__nav-bar > ul > li:nth-child(3) > a > div > i')
+  await page2.waitForSelector('.ReactVirtualized__Grid.ReactVirtualized__List');
+  const scroll = await page2.$('.ReactVirtualized__Grid.ReactVirtualized__List');
+  const o = await page2.evaluate(scroll => {
+
+    scroll.scrollTo(0, 0);
+
+    const o = {
+      "oH": scroll.offsetHeight,
+      "sH": scroll.scrollHeight,
+      "sT": scroll.scrollTop,
+    }
+    return o;
+  }, scroll);
+}
+//@-----------------------------------------------------------------------------
+//@-                              .
+//@-----------------------------------------------------------------------------
+const scrollItem_arr = document.querySelectorAll('match-row__wrapper')
+await page2.$$('match-row__wrapper');
+scrollItem_arr.map(e => {
+  const textArea = await page2.$('#root > div > div.logged__content > div > div > div.side-menu__right > div.matches__conversation > div > div.match__messages > div.match__content > div.match__new-message > div > div.message-input__input > textarea');
+  const chat_arrObj = await page2.$$('.message__body')
+  const chat_arrStr = await page2.evaluate(e => { e.map(f => f.innerText) }, chat_arrObj);
+
+
+
+
+
+
+
+
+
+add insta
+https://www.instagram.com/_ydaj_a/
+prendre un screenshot de la page => la mettre en JPG => et l aficher
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------------
+//  const TIMEOUT_BREATH = 200;
+//  const BREATH = ms => {
+//    console.log('🌬️Taking a breath: + ' + TIMEOUT_BREATH / 1000 + ' s');
+//    new Promise(resolve => setTimeout(resolve, ms))
+//  };
+
+
+ //°-TODO - faire un return ou throw ? Quelle difference ?
+
+
+// --shm-size=1gb
+// '--disable-dev-shm-usage',
+// '--enable-devtools-experiments' # useful for sniffing the chrome devtools protocol
+// '--disable-notifications',
+// ' --disable-infobars'
+// '--dont-require-litepage-redirect-infobar'
+// '--noerrors --disable-session-crashed-bubble --disable-infobars --start-fullscreen --incognito',
+    // const browser = await launch({ args: ['--no-sandbox' ] });
+
+
+
+    // const UNIK_NAME = libTin.unik_tinder_contactName(
+    //   "RAW" //"o_detail.city_str"
+    //   , NAME
+    //   , AGE
+    //   , TINDER_ACCOUNT_str
+    //   ,"RAW" //, INSTAGRAM_ACCOUNT_str
+    //   , DISTANCE
+    //   , STATUS);
+
+    //--------------------------------------------------------------------------
+//@FREE RESOURCES
+//--------------------------------------------------------------------------
+//console.log('%c 🍌[main-finally] -should I remove listeners ? ', "color: green;");
+//console.log('%c 🍌[main-finally] [...] BROWSER will close...', "color: green;");
+//page.removeAllListeners('console') //page.removeAllListeners('pageerror') //page.removeAllListeners('requestfailed') //page.removeListener('pageerror', errorListener);
+//*-pour garder le browser ouvert, ET ainsi relance la compil sur SAVEclosed
+//.await page.close();
+//.await BROWSER.close();
+//console.log('%c 🍌[main-finally] [OK]  BROWSER closed !\n', "color: green;");
+
+  // const BREATH = ms => {
+  //   console.log('🌬️Taking a breath: + ' + TIMEOUT_BREATH / 1000 + ' s');
+  //   new Promise(resolve => setTimeout(resolve, ms))
+  // };
+  // const TIMEOUT_BREATH      = 3000;
+
+
+
+    // {
+    //   // . === F3.3 EXPORT FIREBASE ===
+    //   // = ---------------------------------------------------------------------------
+    //   // = FIREBASE
+    //   // = ---------------------------------------------------------------------------
+    //   // = module_firebase().loadScript("https://www.gstatic.com/firebasejs/6.6.1/", firebaseInit);
+    //   // = try write
+    //   // = return -1;
+
+    //   console.group('🔵=== F3.3: export Firebase ===')
+    //   // TODO - const entity_list = await ();  // ! === === === ===
+    //   function firebaseInit() {
+    //     // ! all SDK DEV only
+    //     // ? DYN IMPORT
+    //     // script.src="/__/firebase/6.6.1/firebase.js"
+    //     // script.src="/__/firebase/init.js"
+    //     // ? CDN
+    //     // addScript("https://www.gstatic.com/firebasejs/6.6.1/");
+    //     // <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    //     //script.src = "https://cdn.firebase.com/js/client//firebase.js";
+    //     // ! config
+    //     var firebaseConfig = {
+    //       apiKey: "AIzaSyDDG-V68LCyNipM2-_R_hDdDfijSTvSe1o",
+    //       authDomain: "my-design-v1.firebaseapp.com",
+    //       databaseURL: "https://my-design-v1.firebaseio.com",
+    //       projectId: "my-design-v1",
+    //       storageBucket: "my-design-v1.appspot.com",
+    //       messagingSenderId: "517935807498",
+    //       appId: "1:517935807498:web:506aeaeddf615e53a733f3"
+    //     };
+    //     firebase.initializeApp(firebaseConfig); // * === === ===
+    //     //   <!-- The core Firebase JS SDK is always required and must be listed first -->
+    //     // <script src="/__/firebase/6.6.2/firebase-app.js"></script>
+    //     // <!-- TODO: Add SDKs for Firebase products that you want to use
+    //     //      https://firebase.google.com/docs/web/setup#available-libraries -->
+    //     // <!-- Initialize Firebase -->
+    //     // <script src="/__/firebase/init.js"></script>
+    //     /*
+    //       new Firebase("https://mine.firebaseio.com/").once(
+    //         "value",
+    //         function(s) {
+    //           console.log(JSON.stringify(s.val()));
+    //         },
+    //         console.error
+    //       );
+    //       */
+    //     // = ---------------------------------------------------------------------------
+    //     // =
+    //     // = ---------------------------------------------------------------------------
+    //     function addScript(src) {
+    //       var s = document.createElement("script");
+    //       s.setAttribute("src", src);
+    //       document.body.appendChild(s);
+    //     }
+    //     // = ---------------------------------------------------------------------------
+    //     // =
+    //     // = ---------------------------------------------------------------------------
+    //     function loadScript(src, cb) {
+    //       var script = document.createElement("script");
+    //       script.async = true;
+    //       script.src = src;
+    //       script.onerror = function () {
+    //         console.log("loading script: KO !!!");
+    //         // cb(new Error("Failed to load" + src));
+    //       };
+    //       script.onload = function () {
+    //         console.log("loading script: OK");
+    //         firebaseInit();
+    //       };
+    //       document.getElementsByTagName("head")[0].appendChild(script);
+    //     }
+    //   }
+    //   console.groupEnd('🔵=== F3.3: export Firebase ===')
+    // }
+
+
+// ? si ca fait 9 chiffres, il faut rajouter l indicatif
+// ? 'brasil' => oui, mais il ne faut regarder que dans SES chats,
+// pas les miens ET il ne faut pas de nom de ville
+
+
+    // const re = /http:\/\/localhost:8001/gi; //°-ctrl+click => ouvre le bon fichier
+    // console.error(err.stack.replace(re, './1-server-openWC')); // To be able to ctrl+click > will log the error with the error stack
+
+
+//# sourceURL=snippet:///scrap-tin-%uD83D%uDC94.js
+// http://localhost:3005/matches/5783b29a9406e2f009057a065c8e8f2bf0956f11007a832c
+// http://localhost:3005/matches/5c8e8f2bf0956f11007a832c
+// 5e852ec076e50e01002d5e5c
+// http://localhost:3005/user/5e852ec076e50e01002d5e5c
+// http://localhost:3005/matches/5c8e8f2bf0956f11007a832c5e491cf3be30ea010011cf30
+
+
+// . data-mining : extract infos
+// . TODO - il faudrait verifier que les phrases sont celles de la fille
+// . check pour chaque ligne, regexp : si l'une evoque un num de tel (5 num continue)
+// . https://www.regexpal.com/?fam=115369
+
+
+// ------------------------------------------------------------------------
+// SPAINISH flow
+// ------------------------------------------------------------------------
+//   function spanish_strategy(page) {
+//     const MSG1_esp = "Hola, en que ciudad estas ?";
+//     const MSG2_esp = "Que bien ! Podemos hablar por whatsapp si gustas.";
+//     //const SPAIN = [MSG1_esp, MSG2_esp]
+//     if (containMsg(Axel_arrStr, MSG2_esp)) { // "Hola, de donde eres..."
+//       // ? CAS 1 - rien (complet) (attend repond bairro)
+//     }
+//     else {
+//       if (containMsg(Axel_arrStr, MSG1_esp)) {
+//         if (await hasedAfterAxel(MSG1, page)) {
+//           await anwser(MSG2, textArea);
+//         }
+//       }
+//       else {
+//         await anwser(MSG1, textArea);
+//       }
+//     }
+//   } // end-spanish
+// }
+
+// const scrollItem_arr = [...document.querySelectorAll('.match-row__wrapper')];
+// const textArea = document.querySelector('textarea');
+// const chat_arrStr = [...document.querySelectorAll('.message__current span')].map(e => e.innerText)
+
+// //turns request interceptor on
+// await page.setRequestInterception(true);
+
+// //if the page makes a  request to a resource type of image or stylesheet then abort that request
+// page.on('request', request => {
+//   if (request.resourceType() === 'image' || req.resourceType() === 'stylesheet')
+//     request.abort();
+//   else
+//     request.continue();
+// });
+
+
+
+// const RE_ME = /at .* \(\/Users\/x\/0git\/axel\/1-TIN-SCRAP\/0-doChat/gi;
+//   const RE_ME_OK          = '/Users/x/0git/axel/1-TIN-SCRAP/0-doChat'
+//   const CHROMIUM_DATA_DIR = "/Users/x/Desktop/chromium-pupp/0-TIN-CHAT";
+
+//*EEEEEEEEEEEEEEEEEEEEEENNNNNNNN        NNNNNNNNDDDDDDDDDDDDD
+//.E::::::::::::::::::::EN:::::::N       N::::::ND::::::::::::DDD
+//!E::::::::::::::::::::EN::::::::N      N::::::ND:::::::::::::::DD
+//?EE::::::EEEEEEEEE::::EN:::::::::N     N::::::NDDD:::::DDDDD:::::D
+//@- E:::::E       EEEEEEN::::::::::N    N::::::N  D:::::D    D:::::D
+//-  E:::::E             N:::::::::::N   N::::::N  D:::::D     D:::::D
+//=- E:::::::::::::::E   N::::::N N::::N N::::::N  D:::::D     D:::::D
+//   E::::::EEEEEEEEEE   N:::::::N::::N  N::::::N  D:::::D     D:::::D
+//*  E:::::::::::::::E   N::::::N  N::::N:::::::N  D:::::D     D:::::D
+//   E::::::EEEEEEEEEE   N::::::N   N:::::::::::N  D:::::D     D:::::D
+//   E:::::E             N::::::N    N::::::::::N  D:::::D     D:::::D
+//   E:::::E       EEEEEEN::::::N     N:::::::::N  D:::::D    D:::::D
+// EE::::::EEEEEEEE:::::EN::::::N      N::::::::NDDD:::::DDDDD:::::D
+// E::::::::::::::::::::EN::::::N       N:::::::ND:::::::::::::::DD
+// E::::::::::::::::::::EN::::::N        N::::::ND::::::::::::DDD
+//*-EEEEEEEEEEEEEEEEEEEEEENNNNNNNN         NNNNNNNDDDDDDDDDDDDD
+
+
+
+
+
+
+

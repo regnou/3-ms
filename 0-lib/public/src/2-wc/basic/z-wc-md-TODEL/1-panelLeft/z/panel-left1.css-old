@@ -1,0 +1,36 @@
+/*°------------------------------------------------ */
+/*°- CHAPITRE */
+/*°------------------------------------------------ */
+.menu-link-chapter {
+ /* font-family: 'Roboto', sans-serif;
+ font-weight: 300;
+
+ font-size  : 0.7em;
+
+ text-transform: capitalize;
+ cursor     : pointer;
+ overflow   : hidden;                    */
+ /*°TEXT DO NOT OVERFLOW little responsive */
+}
+.menu-link-chapter span{
+  /* vertical-align: middle; */
+}
+.menu-link-chapter:hover ,
+.menu-link-chapter:focus
+{
+  /* font-family: 'Roboto', sans-serif;
+  font-weight: 700; */
+}
+.menu-link-chapter .material-icons.md-36{
+  /* padding-right : 10px;
+  vertical-align: middle;
+  color         : white; */
+}
+.menu-link-chapter:hover .material-icons.md-36
+{
+  /* color: gainsboro; */
+}
+.menu-link-chapter:focus .material-icons.md-36
+{
+  /* color: darkgray; */
+}

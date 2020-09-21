@@ -1,0 +1,86 @@
+
+::-webkit-scrollbar {
+ width: 0px;
+ background: transparent; /* make scrollbar transparent */
+}
+
+.grid {
+overflow-x       : scroll;
+scroll-snap-type : x mandatory;  /* TODO */
+position         : relative;
+display          : grid;
+grid-auto-flow   : column;
+grid-auto-columns: 30%;
+/* grid-row-gap     : 15px; */
+/* grid-column-gap  : 10px; */
+/* background: darkgray; */
+background: black;
+border    : 1px solid black;
+}
+.grid:hover {
+/* background: gray; */
+}
+.arrow-left .material-icons{
+margin-top: 60px;
+cursor: default;
+}
+.arrow-right .material-icons{
+ margin-top: 60px;
+ cursor: default;
+ }
+.grid:hover   .arrow-left,
+.grid:hover   .arrow-right {
+display: block;
+opacity: 0.5;
+}
+.arrow-right {
+position  : sticky;
+right     : 0;
+top       : 0;
+width     : 20px;
+background: black;
+color     : white;
+/* display   : none; */
+opacity: 0;
+}
+.arrow-left {
+position  : sticky;
+left      : 0;
+top       : 0;
+width     : 20px;
+background: black;
+color     : white;
+/* display   : none; */
+opacity: 0;
+}
+div .card-char-div {
+scroll-snap-align: start;
+height           : 100%;
+text-align       : center;
+/* background       : gray; */
+vertical-align: middle;
+display       : inline-block;
+cursor        : pointer;
+}
+div .card-char-div:active{
+opacity: 0.5;
+}
+.card-char-img {
+border-radius : 20px;
+padding       : 10px 0;
+height        : 10vh;
+max-width     : calc(100% - 20px);
+border        : 2px solid transparent;
+margin        : 5px;
+vertical-align: middle;
+object-fit    : cover;
+}
+.card-char-div:hover  .card-char-img{
+/* border       : 5px solid black;
+outline      : 5px solid black; */
+border       : 2px solid white;
+outline      : 5px solid black;
+border-radius: 0px;
+background   : #000 !important;
+/* background   : white !important; */
+}
